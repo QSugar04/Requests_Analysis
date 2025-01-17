@@ -19,7 +19,7 @@ Adjust your personal token accordingly in data.py.
 python repo/comments.py
 ```
 
-![img](repo/Top 15 Comment Authors and Others.png)
+![img](repo/Top_15_Comment_Authors_and_Others.png)
 
 ## Demo of Request Analysis Results
 
@@ -27,7 +27,7 @@ python repo/comments.py
 
 ![img](Submit_History/commit_evolution.png)
 
-![img](Submit_History\commit_evolution_since2022.png)
+![img](Submit_History/commit_evolution_since2022.png)
 
 ![img](Submit_History\length of Commit Messages.png)
 
