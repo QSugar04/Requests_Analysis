@@ -31,9 +31,9 @@ python repo/comments.py
 
 ![img](Submit_History/length_of_Commit_Messages.png)
 
-![img](Submit_History\Requests_Repository_Commit_Evolution_Over_Years.png)
+![img](Submit_History/Requests_Repository_Commit_Evolution_Over_Years.png)
 
-![img](Submit_History\Top Keywords in Commit Messages.png)
+![img](Submit_History/Top_Keywords_in_Commit_Messages.png)
 
 ### Submit Characteristics
 
