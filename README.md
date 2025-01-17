@@ -29,9 +29,9 @@ python repo/comments.py
 
 ![img](Submit_History/commit_evolution_since2022.png)
 
-![img](Submit_History\length of Commit Messages.png)
+![img](Submit_History/length_of_Commit_Messages.png)
 
-![img](Submit_History\Requests Repository Commit Evolution Over Years.png)
+![img](Submit_History\Requests_Repository_Commit_Evolution_Over_Years.png)
 
 ![img](Submit_History\Top Keywords in Commit Messages.png)
 
