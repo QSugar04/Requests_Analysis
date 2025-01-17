@@ -19,7 +19,7 @@ Adjust your personal token accordingly in data.py.
 python repo/comments.py
 ```
 
-![img](repo\Top 15 Comment Authors and Others.png)
+![img](repo/Top 15 Comment Authors and Others.png)
 
 ## Demo of Request Analysis Results
 
