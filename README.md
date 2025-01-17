@@ -37,19 +37,19 @@ python repo/comments.py
 
 ### Submit Characteristics
 
-![img](submit_characterstic\Age Distribution of Contributors.png)
+![img](submit_characterstic/Age_Distribution_of_Contributors.png)
 
-![img](submit_characterstic\Commits per Day.png)
+![img](submit_characterstic/Commits_per_Day.png)
 
-![img](submit_characterstic\Label Distribution.png)
+![img](submit_characterstic/Label_Distribution.png)
 
 ### Repository Evolution
 
-![img](repo\Distribution of Issue States.png)
+![img](repo/Distribution_of_Issue_States.png)
 
-![img](repo\Distribution of Number of Functions in requestss Files.png)
+![img](repo/Distribution_of_Number_of_Functions_in_requestss_Files.png)
 
-![img](repo\Repository Releases Evolution.png)
+![img](repo/Repository_Releases_Evolution.png)
 
 ![img](repo\Top 15 Comment Authors and Others.png)
 
