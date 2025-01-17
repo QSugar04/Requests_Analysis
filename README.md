@@ -51,8 +51,8 @@ python repo/comments.py
 
 ![img](repo/Repository_Releases_Evolution.png)
 
-![img](repo\Top 15 Comment Authors and Others.png)
+![img](repo/Top_15_Comment_Authors_and_Others.png)
 
-![img](repo\Top 15 Contributor Locations.png)
+![img](repo/Top_15_Contributor_Locations.png)
 
-![img](repo\Weekly Commit Pattern.png)
+![img](repo/Weekly_Commit_Pattern.png)
