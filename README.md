@@ -25,7 +25,7 @@ python repo/comments.py
 
 ### Submit History
 
-![img](Submit_History\commit_evolution.png)
+![img](Submit_History/commit_evolution.png)
 
 ![img](Submit_History\commit_evolution_since2022.png)
 
