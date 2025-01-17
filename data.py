@@ -6,7 +6,7 @@ token = 'github_pat_11BMNIVLI0yiiCLdolFeLF_WhPVLdVkWLTQ1SeEJfQDYrj4DOCQqRcR7UULW
 
 g = Github(token)
 
-# 获取PEP仓库
+# 获取仓库
 repo = g.get_repo("psf/requests")
 
 # 获取仓库的提交历史    
