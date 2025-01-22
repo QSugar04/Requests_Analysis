@@ -9,6 +9,7 @@ for commit in commits:
 
 # 过滤掉常见的停用词（可以根据实际需求扩展停用词列表）
 stop_words = set(['and', 'the', 'in', 'of', 'to', 'for', 'with', 'on', 'at'])
+# 使用列表推导式过滤掉停用词，仅保留有意义的关键词
 filtered_keywords = [word for word in commit_keywords if word not in stop_words]
 
 # 统计关键词的使用频率
