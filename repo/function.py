@@ -6,15 +6,18 @@ def count_functions_in_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         content = file.read()
 
+# 使用 ast 模块解析文件内容为抽象语法树
     try:
         tree = ast.parse(content)
     except SyntaxError as e:
         print(f"Error parsing {file_path}: {e}")
         return 0
 
+# 遍历 AST 节点，统计 ast.FunctionDef 类型的节点数量
     function_count = sum(isinstance(node, ast.FunctionDef) for node in ast.walk(tree))
     return function_count
 
+#分析指定目录及其子目录中的所有 Python 文件，并统计每个文件中的函数数量
 def analyze_requestss_directory(requestss_directory):
     function_counts = []
 
@@ -27,6 +30,7 @@ def analyze_requestss_directory(requestss_directory):
 
     return function_counts
 
+#绘制函数数量分布的直方图
 def plot_histogram(function_counts):
     plt.hist(function_counts, bins=20, color='skyblue', edgecolor='black')
     plt.title('Distribution of Number of Functions in requestss Files')
