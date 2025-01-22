@@ -12,13 +12,7 @@ exit()
 commit_types = {}
 total_commits = len(commits) # 获取总提交数量
 
-# 遍历提交信息，提取提交类型并统计数量
-for commit in commits:
-    commit_type = commit["commit"]["message"].split(":")[0]
-    commit_types[commit_type] = commit_types.get(commit_type, 0) + 1
 
-# 计算每个类型的提交占比
-commit_percentages = {commit_type: count / total_commits * 100 for commit_type, count in commit_types.items()}
 
 # 绘制饼图
 plt.figure(figsize=(8, 6))
