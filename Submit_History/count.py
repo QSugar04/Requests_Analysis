@@ -6,7 +6,7 @@ from data import commits
 commit_dates = [commit.commit.author.date for commit in commits]
 commit_month_count = Counter(date.strftime('%Y-%m') for date in commit_dates)
 
-# 绘制提交数量随时间的变化图表并保存
+# 绘制提交数量随着时间的变化图表并保存
 months, counts = zip(*sorted(commit_month_count.items()))  # 确保按时间排序
 plt.figure(figsize=(10, 6))  # 设置图像尺寸
 plt.plot(months, counts, marker='o')  # 添加数据点标记
