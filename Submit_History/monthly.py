@@ -14,21 +14,3 @@ commit_month_count_since_2022 = Counter(date.strftime('%Y-%m') for date in commi
 # 使用zip(*)将Counter对象解包为两个元组：月份和对应的提交数量
 months_since_2022, counts_since_2022 = zip(*commit_month_count_since_2022.items())
 
-# 绘制折线图
-plt.plot(months_since_2022, counts_since_2022)
-plt.xlabel('Month')
-plt.ylabel('Number of Commits')
-plt.title('Requests Repository Commit Evolution (2022 - Present)')
-# 调整X轴刻度旋转角度，避免标签重叠
-plt.xticks(rotation=45)
-# 自动调整子图参数，确保布局合理
-plt.tight_layout()
-
-# 保存图像为当前目录的文件
-plt.savefig("commit_evolution_since2022.png")
-
-# 关闭图像，释放资源
-plt.close()
-
-# 输出提示信息，告知用户图表已保存
-print("图表成功已保存为 commit_evolution_since2022.png")
