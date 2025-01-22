@@ -18,11 +18,7 @@ for contributor in contributors:
         age = now - int(birth_date)
         ages.append(age)  
 
-# 绘制贡献者的年龄分布直方图
-plt.hist(ages, bins=20, edgecolor='black')
-plt.xlabel("Age")
-plt.ylabel("Number of Contributors")
-plt.title("Age Distribution of Contributors")
+
 
 # 保存图像为当前目录的文件
 plt.savefig("Age Distribution of Contributors.png")
