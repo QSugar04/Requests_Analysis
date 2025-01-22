@@ -30,27 +30,6 @@ def analyze_requestss_directory(requestss_directory):
 
     return function_counts
 
-#绘制函数数量分布的直方图
-def plot_histogram(function_counts):
-    plt.hist(function_counts, bins=20, color='skyblue', edgecolor='black')
-    plt.title('Distribution of Number of Functions in requestss Files')
-    plt.xlabel('Number of Functions')
-    plt.ylabel('Number of Files')
-    plt.savefig("Distribution of Number of Functions in requestss Files.png")
-    plt.close()
 
-
-
-# 指定仓库路径
-requestss_directory = "C:\\Users\ASUS\\requests"
-
-# 分析requests仓库中的函数数量
-function_counts = analyze_requestss_directory(requestss_directory)
-
-# 输出结果
-print(f"Total number of functions in requestss repository: {sum(function_counts)}")
-print(f"Average number of functions per file: {sum(function_counts) / len(function_counts)}")
-
-plot_histogram(function_counts)
 
 
