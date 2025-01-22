@@ -19,7 +19,6 @@ plt.savefig("length of Commit Messages.png")
 
 # 关闭图像，释放资源
 plt.close()
-
 print("图表已保存为 length of Commit Messages.png")
 
 # 分析提交的时间分布，了解仓库的活跃程度。

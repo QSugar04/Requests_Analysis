@@ -4,6 +4,7 @@ from collections import Counter
 
 # 获取仓库贡献者分布
 contributors = repo.get_contributors()
+# 统计每个贡献者的地理位置分布
 contributor_counts = Counter(contributor.location for contributor in contributors if contributor.location)
 
 # 获取前15个地区

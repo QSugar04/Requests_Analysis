@@ -19,7 +19,7 @@ selected_label = "bug"
 # 获取目标标签对象
 selected_label_obj = None
 for label in labels:
-    if label.name == selected_label:
+    if label.name == selected_label:# 查找目标标签
         selected_label_obj = label
         break
 

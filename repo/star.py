@@ -24,10 +24,9 @@ query($owner: String!, $name: String!, $after: String) {
 }
 """
 
+#获取指定 GitHub 仓库的 stargazers 数据。    
 def fetch_stars(owner, repo_name):
-    """
-    获取指定 GitHub 仓库的 stargazers 数据。
-    """
+    
     url = "https://api.github.com/graphql"
     variables = {"owner": owner, "name": repo_name, "after": None}
     stars = []
@@ -49,10 +48,10 @@ def fetch_stars(owner, repo_name):
 
     return stars
 
+#处理 Star 时间数据，生成按日期的趋势
 def process_trend(stars):
-    """
-    处理 Star 时间数据，生成按日期的趋势。
-    """
+    
+    
     # 转换为日期格式
     dates = [datetime.strptime(star, "%Y-%m-%dT%H:%M:%SZ").date() for star in stars]
     
@@ -63,10 +62,8 @@ def process_trend(stars):
     
     return dates, counts
 
+#绘制 Star 趋势图
 def plot_trend(dates, counts, owner, repo_name):
-    """
-    绘制 Star 趋势图。
-    """
     plt.figure(figsize=(12, 6))
     plt.plot(dates, counts, marker="o", linestyle="-", color="b")
     plt.title(f"Star Trend for {owner}/{repo_name}", fontsize=16)

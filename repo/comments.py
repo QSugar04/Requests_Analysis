@@ -9,7 +9,7 @@ comments = repo.get_comments()
 comment_authors = Counter(comment.user.login for comment in comments)
 
 # 绘制评论数量最多的前N位作者
-top_n = 15  # 或者你希望的前N位作者数量
+top_n = 15  # 选择你希望的前N位作者数量
 top_comment_authors = dict(comment_authors.most_common(top_n))
 other_comment_authors = dict(comment_authors - Counter(top_comment_authors))
 

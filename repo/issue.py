@@ -8,9 +8,11 @@ issues = repo.get_issues(state='all')
 
 # 统计Issue状态分布
 issue_states = Counter(issue.state for issue in issues)
+# 提取状态标签和对应的数量
 labels = list(issue_states.keys())
 sizes = list(issue_states.values())
 
+# 绘制 Issue 状态分布的饼图
 plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
 plt.axis('equal')
 plt.title('Distribution of Issue States')

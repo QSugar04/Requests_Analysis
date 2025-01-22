@@ -2,6 +2,7 @@ from collections import Counter
 import matplotlib.pyplot as plt
 from data import repo,commits
 
+# 获取仓库中所有已关闭（closed）的 issue 记录
 issues = repo.get_issues(state="closed")
 
 # 统计标签分布
@@ -11,7 +12,7 @@ for issue in issues:
     for label in labels:
         labels_counter[label.name] += 1
 
-# 绘制标签分布柱状图
+# 绘制标签分布柱状图，提取标签名称和对应的计数
 labels = list(labels_counter.keys())
 counts = list(labels_counter.values())
 
@@ -27,7 +28,7 @@ plt.close()
 
 print("图表已保存为 Label Distribution.png")
 
-# 分析主题分布
+# 分析主题分布，提取每个 issue 的标题作为主题
 topics = []
 for issue in issues:
     title = issue.title

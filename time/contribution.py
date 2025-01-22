@@ -11,8 +11,8 @@ contributor_data = [(contributor.login, contributor.contributions) for contribut
 contributor_data.sort(key=lambda x: x[1], reverse=True)
 
 # 取前 N 名贡献者
-top_contributors = contributor_data[:10]  # 这里取前 10 名，你可以根据需要调整
-
+# 这里取前 10 名贡献者，你可以根据需要调整数量
+top_contributors = contributor_data[:10]  
 # 提取用户名和提交数量
 top_usernames, top_contributions = zip(*top_contributors)
 
