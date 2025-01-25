@@ -29,6 +29,6 @@ sizes = list(top_keywords.values()) + [sum(other_keywords.values())]
 
 # 绘制饼图
 plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
-plt.axis('equal')  # 使饼图保持圆形
+plt.axis('equal') 
 plt.title(f'Top {top_n_keywords} Contributors and Others')
 plt.savefig(f'Top {top_n_keywords} Contributors and Others')
