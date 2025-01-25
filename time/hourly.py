@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 from collections import Counter
 from data import repo,commits
+
 # 获取仓库的所有提交
 commits = list(repo.get_commits())
 
