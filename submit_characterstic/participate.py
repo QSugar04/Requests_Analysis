@@ -8,6 +8,17 @@ issues = repo.get_issues(state="all")
 reply_times = []
 comment_counts = []
 
+# 遍历每个 issue，统计回复时间和评论数量
+for issue in issues:
+    comments = issue.get_comments()
+    if comments.totalCount > 0:
+        first_comment = comments[0]
+        last_comment = comments.reversed[0]
+        first_comment_time = first_comment.created_at
+        last_comment_time = last_comment.created_at
+        time_difference = last_comment_time - first_comment_time
+        reply_times.append(time_difference.total_seconds() / 3600)  # 将回复时间转换为小时
+        comment_counts.append(comments.totalCount)
 
 # 计算平均回复时间并打印
 average_reply_time = sum(reply_times) / len(reply_times)
