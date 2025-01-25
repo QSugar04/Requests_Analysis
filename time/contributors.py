@@ -5,7 +5,7 @@ from data import commits
 # 获取每个作者的提交版本数量
 author_commits = Counter(commit.commit.author.name for commit in commits)
 
-# 选择贡献最多的前N位作者
+# 选择贡献最多的前N位作者，可根据需求设置不同数量
 top_n = 15
 top_authors = dict(author_commits.most_common(top_n))
 
