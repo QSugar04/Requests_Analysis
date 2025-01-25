@@ -19,6 +19,7 @@ sorted_daily_commits = sorted(daily_commits.items(), key=lambda x: datetime.date
 dates = [x[0] for x in sorted_daily_commits]  
 num_commits = [x[1] for x in sorted_daily_commits]  
 
+
 # 绘制提交数量随时间变化的折线图，dates 为 X 轴，num_commits 为 Y 轴
 plt.plot(dates, num_commits)
 plt.xlabel("Date")
