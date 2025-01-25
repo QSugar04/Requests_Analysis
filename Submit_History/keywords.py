@@ -34,5 +34,5 @@ plt.savefig("Top Keywords in Commit Messages.png")
 # 关闭图像窗口，释放绘图资源
 plt.close()
 
-# 输出提示信息，告知用户图表已成功保存
+# 输出提示信息并告知用户图表已成功保存
 print("图表已保存为 Top Keywords in Commit Messages.png")
