@@ -9,6 +9,7 @@ contributors = repo.get_contributors()
 # 获取当前年份，用于计算年龄
 now = datetime.datetime.now().year
 ages = []
+
 # 遍历每个贡献者，计算其年龄并存储到 ages 列表中
 for contributor in contributors:
     if contributor.name:  
