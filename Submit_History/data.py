@@ -12,6 +12,4 @@ repo = g.get_repo("psf/requests")
 # 获取仓库的提交历史    
 commits = repo.get_commits()
 
-# 打印提交信息示例
-# for commit in commits:
-#   print(commit.commit.author.date, commit.commit.author.name, commit.commit.message)
+
