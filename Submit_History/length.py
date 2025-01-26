@@ -28,7 +28,8 @@ commit_times = [commit.commit.author.date for commit in commits]
 commit_year_counts = Counter(date.year for date in commit_times)
 
 # 绘制折线图
-years, counts = zip(*commit_year_counts.items())# 使用zip函数将年份和对应的提交数量组合在一起，以便绘制折线图
+# 使用zip函数将年份和对应的提交数量组合在一起，以便绘制折线图
+years, counts = zip(*commit_year_counts.items())
 plt.plot(years, counts, marker='o')  
 plt.xlabel('Year')  
 plt.ylabel('Number of Commits') 
