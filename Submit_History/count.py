@@ -13,8 +13,8 @@ plt.plot(months, counts, marker='o')
 plt.xlabel('Month')
 plt.ylabel('Number of Commits')
 plt.title('Requests Repository Commit Evolution')
-plt.xticks(rotation=45)  # 调整x轴刻度旋转角度，避免重叠
-plt.tight_layout()  # 自动调整子图参数使之适应图像区域
+plt.xticks(rotation=45)  
+plt.tight_layout()  
 
 # 保存图像为当前目录的文件
 plt.savefig("commit_evolution.png")
