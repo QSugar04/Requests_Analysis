@@ -14,8 +14,14 @@ sizes = list(issue_states.values())
 
 # 绘制 Issue 状态分布的饼图
 plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
+
+# 设置饼图的x轴和y轴相等，以确保饼图是圆形的
 plt.axis('equal')
+
+# 设置饼图的标题
 plt.title('Distribution of Issue States')
+
+# 保存饼图为图片文件，文件名是"Distribution of Issue States"
 plt.savefig("Distribution of Issue States")
 
 # 统计平均解决时间
