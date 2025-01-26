@@ -14,7 +14,7 @@ filtered_keywords = [word for word in commit_keywords if word not in stop_words]
 # 统计关键词的使用频率
 keyword_counts = Counter(filtered_keywords)
 
-# 取前N个关键词绘制柱状图
+# 取前N个关键词的使用情况绘制柱状图
 top_n_keywords = 10
 top_keywords = dict(keyword_counts.most_common(top_n_keywords))
 
