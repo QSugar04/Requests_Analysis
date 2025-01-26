@@ -20,7 +20,7 @@ sizes = list(top_authors.values()) + [sum(other_authors.values())]
 plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
 plt.axis('equal')  
 plt.title(f'Top {top_n} Contributors and Others')
-plt.tight_layout()  # 自动调整子图参数使之适应图像区域
+plt.tight_layout()  
 
 # 保存图像作为当前目录的文件
 plt.savefig("Top 15 Contributors and Others.png")
