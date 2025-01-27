@@ -62,3 +62,34 @@ def process_trend(stars):
     
     return dates, counts
 
+#绘制 Star 趋势图
+def plot_trend(dates, counts, owner, repo_name):
+    plt.figure(figsize=(12, 6))
+    plt.plot(dates, counts, marker="o", linestyle="-", color="b")
+    plt.title(f"Star Trend for {owner}/{repo_name}", fontsize=16)
+    plt.xlabel("Date", fontsize=12)
+    plt.ylabel("Number of Stars", fontsize=12)
+    plt.grid(True)
+    plt.tight_layout()
+
+    # 保存图像为文件
+    filename = f"Star_Trend_{owner}_{repo_name}.png"
+    plt.savefig(filename, format="png", dpi=300)
+    print(f"Saved trend plot to {filename}")
+
+if __name__ == "__main__":
+    # 替换为目标仓库的所有者和名称
+    owner = "psf"
+    repo_name = "requests"
+
+    # 获取 Star 数据
+    print("Fetching star data...")
+    stars = fetch_stars(owner, repo_name)
+
+    # 处理 Star 趋势
+    print("Processing trend data...")
+    dates, counts = process_trend(stars)
+
+    # 绘制趋势图
+    print("Plotting trend...")
+    plot_trend(dates, counts, owner, repo_name)
