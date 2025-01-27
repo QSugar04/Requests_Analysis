@@ -34,30 +34,4 @@ bug_issues = repo.get_issues(labels=[selected_label_obj])
 bug_commit_dates = []
 commit_hash_pattern = re.compile(r"(?:[Ff]ixed|[Cc]losed) in commit ([a-f0-9]{7,40})")
 
-for issue in bug_issues:
-    # 获取与 Issue 相关的评论
-    comments = issue.get_comments()
-    for comment in comments:
-        match = commit_hash_pattern.search(comment.body)
-        if match:
-            commit_hash = match.group(1)
-            try:
-                commit = repo.get_commit(commit_hash)
-                bug_commit_dates.append(commit.commit.author.date)
-            except Exception as e:
-                print(f"Error fetching commit {commit_hash}: {e}")
 
-if bug_commit_dates:
-    # 按月份统计提交次数
-    bug_commit_month_count = Counter(date.strftime('%Y-%m') for date in bug_commit_dates)
-    bug_months, bug_counts = zip(*sorted(bug_commit_month_count.items()))
-    plt.plot(bug_months, bug_counts)
-    plt.xlabel("Month")
-    plt.ylabel("Number of Bug Fixes")
-    plt.title("Bug Fix Commit Evolution")
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-    plt.savefig("Bug Fix Commit Evolution.png")
-    print("图表已保存为 Bug Fix Commit Evolution.png")
-else:
-    print("No Bug Fix Commits found.")
